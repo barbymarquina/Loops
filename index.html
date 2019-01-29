@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bucles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!--Ejercicio obligatorio 1-->
+    <div>
+        <pre>Ejercicio #1</pre>
+        <button onclick="primerosVeinticinco();">Aceptar</button>
+        <span id="numeros"></span>
+        <script>
+            /* function primerosVeinticinco() {
+                 let texto = " ";
+                 let numero = document.getElementById("numeros");
+                 for (let i = 1; i < 26; i++) {
+ 
+                     if (i < 25) {
+                         texto += i + " , ";
+                     }else {
+                         texto+= i + ".";
+                     }
+                 }
+                 numero.innerHTML = texto;
+             }*/
+
+            function primerosVeinticinco() {
+                let i = 1;
+                let texto = " ";
+                let numero = document.getElementById("numeros");
+
+                while (i < 25) {
+                    i++;
+                    if (i < 25) {
+                        texto += i + " , ";
+                    } else {
+                        texto += i + ".";
+                    }
+                }
+                numero.innerHTML = texto;
+            }
+        </script>
+
+    </div>
+    <!--Ejercicio 2-->
+    <div>
+        <pre>Ejercicio #2</pre>
+        <button onclick="notas();">Aceptar</button>
+        <span id="textoNotas"></span>
+
+        <script>
+            /*function notas() {
+                let notas = [1, 3, 6, 7, 4, 8, 4, 9, 0, 6, 4, 8, 5];
+                let valorMayores = 0;
+                let valorMenores = 0;
+                let textoSpan= document.getElementById("textoNotas");
+                
+
+                for (i = 0; i < notas.length; i++) {
+
+                    if (notas[i] >= 6) {
+                        valorMayores++
+                    } else {
+                        valorMenores++
+                    }
+
+                }
+                let textoNotas= "El número de alumnos con notas mayores o iguales que es: " + valorMayores + ", y menores es: " + valorMenores;
+                textoSpan.innerHTML= textoNotas;
+            }*/
+
+            function notas() {
+                let notas = [1, 3, 6, 7, 4, 8, 4, 9, 0, 6, 4, 8, 5];
+                let valorMayores = 0;
+                let valorMenores = 0;
+                let textoSpan = document.getElementById("textoNotas");
+                let i = 0;
+                while (i < notas.length) {
+                    i++
+                    if (notas[i] >= 6) {
+                        valorMayores++
+                    } else {
+                        valorMenores++
+                    }
+
+                }
+                let textoNotas = "El número de alumnos con notas mayores o iguales que seis es: " + valorMayores + ", y menores que seis es: " + valorMenores;
+                textoSpan.innerHTML = textoNotas;
+            }
+        </script>
+    </div>
+    <!--Ejercicio 3-->
+    <div>
+        <pre>Ejercicio #3</pre>
+        <input type="number" id="numberImput">
+        <button onclick="tablaDeMultiplicar();">Aceptar</button>
+        <pre>Ingresa un número del 1 al 10 y te mostraré
+los primeros 12 terminos de su tabla de multiplicar</pre>
+        <span id="resulMultiplica"></span>
+    </div>
+
+    <script>
+        /*function tablaDeMultiplicar() {
+            let num = document.getElementById("numberImput").value;
+            num = parseInt(num);
+            let resultado;
+            let txtResultado = document.getElementById("resulMultiplica");
+            let tabla = " ";
+
+            for (i = 0; i <= 12; i++) {
+
+                resultado = num * i;
+                tabla +=  num + " x " + i + " = " + resultado + "<br>";
+            }
+
+            txtResultado.innerHTML = tabla;
+        }*/
+        function tablaDeMultiplicar() {
+            let num = document.getElementById("numberImput").value;
+            num = parseInt(num);
+            let resultado;
+            let txtResultado = document.getElementById("resulMultiplica");
+            let tabla = " ";
+            i=0;
+
+            while (i < 12) {
+                
+                resultado = num * i;
+                i++
+                tabla += num + " x " + i + " = " + resultado + "<br>";
+            }
+
+            txtResultado.innerHTML = tabla;
+        }
+    </script>
+
+    <div>
+            <pre>Ejercicio #4</pre>
+            <button onclick="">Aceptar</button>
+            <span id=""></span>
+    
+    </div>
+</body>
+
+</html>
